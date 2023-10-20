@@ -23,8 +23,6 @@ import threejs from "./tech/threejs.svg";
 
 import meta from "./company/meta.png";
 import sti from "./company/sti.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import kenzie from "./company/Kenzie.png";
 
 import carrent from "./carrent.png";
@@ -55,8 +53,6 @@ export {
   threejs,
   meta,
   sti,
-  starbucks,
-  tesla,
   kenzie,
   carrent,
   jobit,
