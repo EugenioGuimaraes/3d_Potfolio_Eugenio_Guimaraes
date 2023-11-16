@@ -1,40 +1,23 @@
-import { useState } from 'react'
-import { BrowserRouter } from 'react-router-dom';
-import {
-  Hero,
-  Navbar,
-  About,
-  Tech,
-  Experience,
-  Works,
-  Feedbacks,
-  Contact,
-  StarsCanvas
-} from './components';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Home, About, Projects, Contact } from './pages';
+import Navbar from './components/Navbar';
 
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        {/*
-         <Works /> 
-        <Feedbacks />
-        */}
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
-  );
+    return (
+        <main className='bg-slate-300/20'>
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />}/>
+                    <Route path="/about" element={<About />}/>
+                    <Route path="/projects" element={<Projects />}/>
+                    <Route path="/contact" element={<Contact />}/>
+                </Routes>
+            </Router>
+        </main>
+    )
 }
 
-export default App;
+export default App
